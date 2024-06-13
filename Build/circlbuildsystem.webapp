@@ -1,0 +1,159 @@
+ < ? x m l   v e r s i o n = " 1 . 0 "   e n c o d i n g = " u t f - 3 2 " ? > 
+ 
+ < ! - -   W e b s i t e   2   A P K   B u i l d e r   P r o j e c t   F i l e - - > 
+ 
+ < C o n f i g > 
+ 
+     < M e t a D a t a > 
+ 
+         < T y p e > W e b < / T y p e > 
+ 
+         < A p p T i t l e > C i r c l < / A p p T i t l e > 
+ 
+         < P a c k a g e B l o c k 1 > c o m < / P a c k a g e B l o c k 1 > 
+ 
+         < P a c k a g e B l o c k 2 > w i c o r n 2 9 < / P a c k a g e B l o c k 2 > 
+ 
+         < P a c k a g e B l o c k 3 > c i r c l < / P a c k a g e B l o c k 3 > 
+ 
+         < V e r s i o n N a m e > 1 . 0 < / V e r s i o n N a m e > 
+ 
+         < V e r s i o n C o d e > 1 < / V e r s i o n C o d e > 
+ 
+         < A p p O r i e n t a t i o n > A u t o < / A p p O r i e n t a t i o n > 
+ 
+         < O u t p u t D i r > C : \ U s e r s \ w i c o r n 2 9 \ D e s k t o p < / O u t p u t D i r > 
+ 
+     < / M e t a D a t a > 
+ 
+     < R u n t i m e I n f o > 
+ 
+         < A b o u t T e x t > A   c l o s e - k n i t ,   e x c l u s i v e   s o c i a l   n e t w o r k < / A b o u t T e x t > 
+ 
+         < s h a r e t e x t > H i   t h e r e ,   G i v e   t h i s   a p p   a   t r y . < / s h a r e t e x t > 
+ 
+         < E x i t T e x t > A r e   y o u   s u r e   y o u   w a n t   t o   e x i t ? < / E x i t T e x t > 
+ 
+         < E r r o r P a g e > C : \ U s e r s \ w i c o r n 2 9 \ D e s k t o p \ c i r c l s t a t i c \ e r r o r . h t m l < / E r r o r P a g e > 
+ 
+         < S p l a s h I m g > D e f a u l t < / S p l a s h I m g > 
+ 
+         < A p p I c o n I m g > C : \ U s e r s \ w i c o r n 2 9 \ D o w n l o a d s \ C i r c l . p n g < / A p p I c o n I m g > 
+ 
+         < C a c h e M o d e > N o C a c h e < / C a c h e M o d e > 
+ 
+         < U R L p r o t o c o l > H T T P S < / U R L p r o t o c o l > 
+ 
+         < W e b U R L > h t m l p r e v i e w . g i t h u b . i o / ? h t t p s : / / g i t h u b . c o m / w i c o r n 2 9 / C i r c l / b l o b / m a i n / K e y % 2 0 S y s t e m / v 0 . 1 . h t m l < / W e b U R L > 
+ 
+         < S p l a s h D u r a t i o n > 1 5 0 0 < / S p l a s h D u r a t i o n > 
+ 
+         < P r o g r e s s W h e e l I n t > 2 < / P r o g r e s s W h e e l I n t > 
+ 
+         < P r o g r e s s B a r D e f a u l t > T r u e < / P r o g r e s s B a r D e f a u l t > 
+ 
+         < P r o g r e s s W h e e l   / > 
+ 
+     < / R u n t i m e I n f o > 
+ 
+     < A d M o b > 
+ 
+         < A d M o b _ B a n n e r _ I D > < / A d M o b _ B a n n e r _ I D > 
+ 
+         < A d M o b _ I n t e r s t i t i a l _ I D > < / A d M o b _ I n t e r s t i t i a l _ I D > 
+ 
+         < A d M o b _ I n t e r s t i t i a l _ I n t e r v a l > < / A d M o b _ I n t e r s t i t i a l _ I n t e r v a l > 
+ 
+     < / A d M o b > 
+ 
+     < E x t r a s > 
+ 
+         < g e s t u r e Z o o m > T r u e < / g e s t u r e Z o o m > 
+ 
+         < Z o o m C o n t r o l s > F a l s e < / Z o o m C o n t r o l s > 
+ 
+         < s c r o l l b a r s > F a l s e < / s c r o l l b a r s > 
+ 
+         < t e x t s e l e c t > T r u e < / t e x t s e l e c t > 
+ 
+         < f o r m d a t a > T r u e < / f o r m d a t a > 
+ 
+         < f u l l s c r e e n > F a l s e < / f u l l s c r e e n > 
+ 
+         < e n a b l e J s A p i > T r u e < / e n a b l e J s A p i > 
+ 
+         < h t t p s O n l y > F a l s e < / h t t p s O n l y > 
+ 
+         < e x t l i n k c h e c k > T r u e < / e x t l i n k c h e c k > 
+ 
+         < c o n f e x i t c h e c k > F a l s e < / c o n f e x i t c h e c k > 
+ 
+         < p r o m p t g p s > F a l s e < / p r o m p t g p s > 
+ 
+         < D i s a l l o w S c r e e n s h o t > F a l s e < / D i s a l l o w S c r e e n s h o t > 
+ 
+         < A l l o w F i l e A c c e s s > F a l s e < / A l l o w F i l e A c c e s s > 
+ 
+         < A l l o w C r o s s O r i g i n > F a l s e < / A l l o w C r o s s O r i g i n > 
+ 
+         < A p p T o o l B a r > F a l s e < / A p p T o o l B a r > 
+ 
+         < L i v e T o o l B a r T i t l e > F a l s e < / L i v e T o o l B a r T i t l e > 
+ 
+         < S h o w H o m e B u t t o n > F a l s e < / S h o w H o m e B u t t o n > 
+ 
+         < P u l l T o R e f r e s h > F a l s e < / P u l l T o R e f r e s h > 
+ 
+         < h i d e M o b i l e C h e c k > F a l s e < / h i d e M o b i l e C h e c k > 
+ 
+         < h i d e W e b V i e w C h e c k > F a l s e < / h i d e W e b V i e w C h e c k > 
+ 
+         < d e s k t o p M o d e > F a l s e < / d e s k t o p M o d e > 
+ 
+     < / E x t r a s > 
+ 
+     < P e r m i s s i o n s > 
+ 
+         < I N T E R N E T > t r u e < / I N T E R N E T > 
+ 
+         < A C C E S S _ C O A R S E _ L O C A T I O N > f a l s e < / A C C E S S _ C O A R S E _ L O C A T I O N > 
+ 
+         < A C C E S S _ F I N E _ L O C A T I O N > f a l s e < / A C C E S S _ F I N E _ L O C A T I O N > 
+ 
+         < C A M E R A > f a l s e < / C A M E R A > 
+ 
+         < R E A D _ E X T E R N A L _ S T O R A G E > f a l s e < / R E A D _ E X T E R N A L _ S T O R A G E > 
+ 
+         < W R I T E _ E X T E R N A L _ S T O R A G E > f a l s e < / W R I T E _ E X T E R N A L _ S T O R A G E > 
+ 
+         < R E C O R D _ A U D I O > f a l s e < / R E C O R D _ A U D I O > 
+ 
+         < V I B R A T E > f a l s e < / V I B R A T E > 
+ 
+     < / P e r m i s s i o n s > 
+ 
+     < P u s h C o n f i g > 
+ 
+         < P u s h I c o n   / > 
+ 
+         < G J s o n F i l e > N o   F i l e   S e l e c t e d . . . < / G J s o n F i l e > 
+ 
+         < A s k U s e r > F a l s e < / A s k U s e r > 
+ 
+         < P r e v e n t O v e r l a p > F a l s e < / P r e v e n t O v e r l a p > 
+ 
+     < / P u s h C o n f i g > 
+ 
+     < M a t e r i a l C o l o r > 
+ 
+         < C o l o r P r i m a r y > 3 D 5 A F E < / C o l o r P r i m a r y > 
+ 
+         < C o l o r P r i m a r y D a r k > 0 0 3 1 C A < / C o l o r P r i m a r y D a r k > 
+ 
+         < C o l o r L i g h t > 8 1 8 7 F F < / C o l o r L i g h t > 
+ 
+     < / M a t e r i a l C o l o r > 
+ 
+     < N a v X m l D a t a > & l t ; r o o t & g t ; & l t ; / r o o t & g t ; < / N a v X m l D a t a > 
+ 
+ < / C o n f i g > 
