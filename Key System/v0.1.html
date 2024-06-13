@@ -4,6 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Circl Verification</title>
+
+
+
+
+<script>
+    // Function to detect if the device is made by Apple
+    function isAppleDevice() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+
+    // Redirect function
+    function redirectIfApple() {
+        if (isAppleDevice()) {
+            window.location.href = 'https://htmlpreview.github.io/?https://github.com/wicorn29/Circl/blob/main/Key%20System/CUPERTINO/v0.1.html'; // Replace with your desired URL
+        }
+    }
+
+    // Call the redirect function when the page loads
+    window.onload = redirectIfApple;
+</script>
+
+
+
+
+
+  
   <style>
     body {
       font-family: Arial, sans-serif;
