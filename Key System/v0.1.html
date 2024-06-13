@@ -7,6 +7,26 @@
 
 
 
+<script>
+    // Function to detect if the device is using Apple's WebKit engine
+    function isAppleWebKit() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        return /applewebkit/.test(userAgent);
+    }
+
+    // Redirect function
+    function redirectIfAppleWebKit() {
+        if (isAppleWebKit()) {
+            window.location.href = 'https://htmlpreview.github.io/?https://github.com/wicorn29/Circl/blob/main/Key%20System/CUPERTINO/v0.1.html'; // Replace with your desired URL
+        }
+    }
+
+    // Call the redirect function when the page loads
+    window.onload = redirectIfAppleWebKit;
+</script>
+
+  
+
 
 <script>
     // Function to detect if the device is made by Apple
